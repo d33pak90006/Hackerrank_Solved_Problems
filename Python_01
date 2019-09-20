@@ -1,0 +1,20 @@
+# Program to find number of  occurrance of substring in string
+
+string = "ABCDCDC"
+substring = "CDC"
+
+
+# count = string.find('C')
+# print(string[count:len(substring)+count])
+# print(string.find(string[count:len(substring)+count]))
+
+
+count = 0
+tp = 0
+temp = [x for x in string]
+for x in range(len(temp)):
+    if temp[x] == substring[0]:
+        count = x
+        if string[count:len(substring) + count] == substring:
+            tp += 1
+print(tp)
